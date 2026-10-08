@@ -1,0 +1,27 @@
+{
+  "id": "ota_lab-4386930",
+  "name": "ota_lab",
+  "pdk": "sky130",
+  "author": "layout-canvas",
+  "description": "5-T OTA lab: diff pair + PMOS mirror load + NMOS tail sink. op/pex/ac testbenches with measured spec bounds \u2014 +14 dB gain, 501 MHz BW on real ngspice.",
+  "tags": [
+    "sky130",
+    "ota",
+    "testbench",
+    "lab"
+  ],
+  "created": "2026-10-08T04:39:46Z",
+  "instances": 3,
+  "blocks": [
+    "sky130.current_mirror",
+    "sky130.diff_pair"
+  ],
+  "design_hash": "b8bcbcb9e6b4f989bd8c617b850ad65c982830137393d1d0dadb25346236604a",
+  "ai_generated": false,
+  "verification": {
+    "status": "ok",
+    "drc_violations": 0,
+    "lvs_match": true,
+    "passed": true
+  }
+}
