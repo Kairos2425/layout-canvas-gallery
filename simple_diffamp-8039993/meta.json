@@ -1,0 +1,26 @@
+{
+  "id": "simple_diffamp-8039993",
+  "name": "simple_diffamp",
+  "pdk": "sky130",
+  "author": "layout-canvas",
+  "description": "Differential pair + current mirror tail \u2014 the starter design.",
+  "tags": [
+    "sky130",
+    "diffpair",
+    "starter"
+  ],
+  "created": "2026-10-08T02:53:59Z",
+  "instances": 3,
+  "blocks": [
+    "sky130.current_mirror",
+    "sky130.diff_pair"
+  ],
+  "design_hash": "1384813753b744b4cccec53f222f988c1cd97af75b08cf62e74349e76dfa9929",
+  "ai_generated": false,
+  "verification": {
+    "status": "ok",
+    "drc_violations": 0,
+    "lvs_match": true,
+    "passed": true
+  }
+}

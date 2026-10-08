@@ -1,0 +1,145 @@
+{
+  "ir_version": "0.1",
+  "name": "simple_diffamp",
+  "pdk": "sky130",
+  "instances": [
+    {
+      "id": "DPAIR",
+      "block": "sky130.diff_pair",
+      "params": {
+        "fingers": 4,
+        "width": 2.0,
+        "length": 0.5,
+        "tail_width": 4.0
+      },
+      "placement": {
+        "x": 0.0,
+        "y": 10.0,
+        "rotation": 0,
+        "mirror": false,
+        "relative_to": null,
+        "relation": null,
+        "align": null,
+        "margin": 0.0
+      }
+    },
+    {
+      "id": "LOAD1",
+      "block": "sky130.current_mirror",
+      "params": {
+        "fingers": 4,
+        "width": 1.5,
+        "length": 0.5,
+        "type": "pmos"
+      },
+      "placement": {
+        "x": 5.0,
+        "y": 20.0,
+        "rotation": 0,
+        "mirror": true,
+        "relative_to": null,
+        "relation": null,
+        "align": null,
+        "margin": 0.0
+      }
+    },
+    {
+      "id": "LOAD2",
+      "block": "sky130.current_mirror",
+      "params": {
+        "fingers": 4,
+        "width": 1.5,
+        "length": 0.5,
+        "type": "pmos"
+      },
+      "placement": {
+        "x": 15.0,
+        "y": 20.0,
+        "rotation": 0,
+        "mirror": true,
+        "relative_to": null,
+        "relation": null,
+        "align": null,
+        "margin": 0.0
+      }
+    }
+  ],
+  "nets": [
+    {
+      "name": "vdd",
+      "pins": [
+        "LOAD1.in",
+        "LOAD2.in"
+      ]
+    },
+    {
+      "name": "outp",
+      "pins": [
+        "DPAIR.outp",
+        "LOAD1.out"
+      ]
+    },
+    {
+      "name": "outn",
+      "pins": [
+        "DPAIR.outn",
+        "LOAD2.out"
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "type": "symmetric",
+      "instances": [
+        "LOAD1",
+        "LOAD2"
+      ],
+      "nets": null,
+      "axis": "vertical",
+      "edge": null,
+      "direction": null,
+      "note": "Match active loads for CMRR"
+    },
+    {
+      "type": "align",
+      "instances": [
+        "LOAD1",
+        "LOAD2",
+        "DPAIR"
+      ],
+      "nets": null,
+      "axis": null,
+      "edge": "center_x",
+      "direction": null,
+      "note": null
+    }
+  ],
+  "ports": [
+    {
+      "name": "inp",
+      "pin": "DPAIR.inp",
+      "direction": "input"
+    },
+    {
+      "name": "inn",
+      "pin": "DPAIR.inn",
+      "direction": "input"
+    },
+    {
+      "name": "outp",
+      "pin": "LOAD1.out",
+      "direction": "output"
+    },
+    {
+      "name": "outn",
+      "pin": "LOAD2.out",
+      "direction": "output"
+    }
+  ],
+  "testbenches": [],
+  "meta": {
+    "author": "layout-canvas",
+    "description": "Simple differential amplifier example",
+    "date": "2026-09-11"
+  }
+}
