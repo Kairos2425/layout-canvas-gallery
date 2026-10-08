@@ -1,0 +1,22 @@
+{
+  "id": "ota_lab-7584545",
+  "name": "ota_lab",
+  "pdk": "sky130",
+  "author": "live-test",
+  "description": "",
+  "tags": [],
+  "created": "2026-10-08T02:46:24Z",
+  "instances": 3,
+  "blocks": [
+    "sky130.current_mirror",
+    "sky130.diff_pair"
+  ],
+  "design_hash": "f32bf729588ab87c75322d5ded4aebb6d6720192bd8d4d074f85f0233051e0e9",
+  "ai_generated": true,
+  "verification": {
+    "status": "ok",
+    "drc_violations": 0,
+    "lvs_match": true,
+    "passed": true
+  }
+}
