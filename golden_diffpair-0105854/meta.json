@@ -1,0 +1,27 @@
+{
+  "id": "golden_diffpair-0105854",
+  "name": "golden_diffpair",
+  "pdk": "sky130",
+  "author": "layout-canvas",
+  "description": "Golden common-centroid diff pair: two ABBA cells mirrored about a shared axis inside a guard ring; verify carries the quality evidence (5/5 declared constraints, 0.0000um deviations).",
+  "tags": [
+    "golden",
+    "matching",
+    "sky130"
+  ],
+  "created": "2026-10-28T06:48:25Z",
+  "instances": 5,
+  "blocks": [
+    "sky130.current_mirror",
+    "sky130.diff_pair",
+    "sky130.guard_ring"
+  ],
+  "design_hash": "5389d44d827409bb40bb110327313fafa7644dcf828fbea1e4060ede2dc4f704",
+  "ai_generated": true,
+  "verification": {
+    "status": "ok",
+    "drc_violations": 0,
+    "lvs_match": true,
+    "passed": true
+  }
+}
